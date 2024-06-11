@@ -3,7 +3,7 @@ const { DJ } = require('../../models');
 
 router.post('/', async (req, res) => {
   try {
-    const DJData = await User.create(req.body);
+    const DJData = await DJ.create(req.body);
 
     req.session.save(() => {
       req.session.user_id = DJData.id;
@@ -18,7 +18,7 @@ router.post('/', async (req, res) => {
 
 router.post('/login', async (req, res) => {
   try {
-    const DJData = await User.findOne({ 
+    const DJData = await DJ.findOne({ 
 			where: { username: req.body.username } 
 		});
 

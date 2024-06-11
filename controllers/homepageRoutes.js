@@ -2,6 +2,7 @@ const router = require('express').Router();
 const { DJ, Event, Guest, SongRequest } = require('../models');
 const withAuth = require('../utils/auth'); // Added but unused as of now
 
+// router to get the events.
 router.get('/', async (req, res) => {
 	try {
 		const eventList = await Event.findAll();

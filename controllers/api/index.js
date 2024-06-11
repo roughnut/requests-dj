@@ -5,7 +5,7 @@ const songRequestRoutes = require('./songReqRoutes');
 const DJRoutes = require('./DJRoutes');
 
 router.use('/djs', DJRoutes);
-router.use('/events', eventRoutes); // Base file added but nothing there yet
-router.use('/requests', songRequestRoutes); // Base file added but nothing there yet
+router.use('/events', eventRoutes);
+router.use('/requests', songRequestRoutes);
 
 module.exports = router;

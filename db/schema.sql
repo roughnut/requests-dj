@@ -1,0 +1,2 @@
+DROP DATABASE IF EXISTS requests_db;
+CREATE DATABASE requests_db;

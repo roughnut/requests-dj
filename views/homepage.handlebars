@@ -1,3 +1,5 @@
-<header>Event name</header>
-                <p>Date</p>
-                <p>DJ</p>
+{{#each events as |event|}}
+  <header>{{event.name}}</header>
+  <p>{{event.date}}</p>
+  <p>{{event.dj_id}}</p>
+{{/each}}

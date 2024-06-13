@@ -30,7 +30,7 @@
             headphones
           </span>DJs</a>
 
-        {{#if loggedIn}}
+        {{#if logged_in}}
           <button id="logout">Logout</button>
         {{else}}
           <a href="/login" class="flex items-center gap-1 transition-all "><span
@@ -53,7 +53,7 @@
         <button class="bg-custom-charcoal text-white rounded-md">Add new event</button>
       </section>
     </main>
-    {{#if loggedIn}}
+    {{#if logged_in}}
       <script src="/js/logout.js"></script>
     {{/if}}
   </body>

@@ -30,6 +30,6 @@ const loginFormHandler = async (event) => {
 };
 
 // Add in when we have a login button
-// document
-//   .querySelector(".login-form")
-//   .addEventListener("submit", loginFormHandler);
+document
+  .querySelector(".login-form")
+  .addEventListener("submit", loginFormHandler);

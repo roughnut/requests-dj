@@ -2,9 +2,9 @@ const router = require('express').Router();
 
 const eventRoutes = require('./eventRoutes');
 const songRequestRoutes = require('./songReqRoutes');
-const DJRoutes = require('./DJRoutes');
+const userRoutes = require('./userRoutes');
 
-router.use('/djs', DJRoutes);
+router.use('/users', userRoutes);
 router.use('/events', eventRoutes);
 router.use('/requests', songRequestRoutes);
 

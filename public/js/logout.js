@@ -11,7 +11,7 @@ const logout = async () => {
   }
 };
 
-// Add when we have a login system to press a button to log out.
+// Add when we have a login system to press a button to log out. Uses an ID rather than a class, but can be changed to use either class or ID
 // document
 //   .querySelector("#logout")
 //   .addEventListener("click", logout);

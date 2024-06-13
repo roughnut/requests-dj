@@ -30,6 +30,6 @@ const signupFormHandler = async (event) => {
 };
 
 // Add to allow a new user to be added when submitting via a sign up button.
-// document
-//   .querySelector(".signup-form")
-//   .addEventListener("submit", signupFormHandler);
+document
+  .querySelector(".signup-form")
+  .addEventListener("submit", signupFormHandler);

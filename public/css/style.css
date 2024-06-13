@@ -1,1 +1,79 @@
-/* Code added later */
+@layer utilities {
+  .bg-custom-charcoal {
+    background-color: #264653;
+  }
+  .text-custom-charcoal {
+    color: #264653;
+  }
+  .hover\:text-custom-charcoal:hover {
+    color: #264653;
+  }
+ 
+  .bg-custom-green {
+    background-color: #2a9d8f;
+  }
+  .text-custom-green {
+    color: #2a9d8f;
+  }
+  .hover\:text-custom-green:hover {
+    color: #2a9d8f;
+  }
+
+  .bg-custom-brown {
+    background-color: #e9c46a;
+  }
+  .text-custom-brown {
+    color: #e9c46a;
+  }
+  .hover\:text-custom-brown:hover {
+    color: #e9c46a;
+  }
+
+  .bg-custom-mandalay {
+    background-color: #f4a261;
+  }
+  .text-custom-mandalay {
+    color: #f4a261;
+  }
+  .hover\:text-custom-mandalay:hover {
+    color: #f4a261;
+  }
+  
+
+  .bg-custom-terra-cotta {
+    background-color: #e76f51;
+  }
+  .text-custom-terra-cotta {
+    color: #e76f51;
+  }
+  .hover\:text-custom-terra-cotta:hover {
+    color: #e76f51;
+  }
+}
+
+.border-custom-charcoal {
+    --tw-border-opacity: 1;
+    border-color: #264653;
+  }
+
+.border-custom-brown {
+  border-color: #e9c46a;
+}
+.border-custom-green {
+  border-color: #2a9d8f;
+}
+
+.border-custom-terra-cotta {
+  border-color: #e76f51;
+}
+
+.border-custom-mandalay {
+    border-color: #f4a261;
+  }
+h1.logo {
+  text-indent: -9999;
+}
+header nav a:hover{
+    text-decoration: none;
+    color: #f4a261;
+}

@@ -21,6 +21,27 @@ router.get('/', async (req, res) => {
 	}
 });
 
+
+
+// This will handle the route when going to log in, if already logged in, it will take us back to the homepage
+router.get("/login", (req, res) => {
+	if (req.session.logged_in) {
+	  res.redirect("/");
+	  return;
+	}
+  
+	res.render("login");
+  });
+
+  // This will handle the route when going to sign up, if already logged in, it will take us to the homepage
+router.get("/signUp", (req, res) => {
+	if (req.session.logged_in) {
+	  res.redirect("/");
+	  return;
+	}
+	res.render("signUp");
+  });
+  
 // More homepage routes can be added here later
 
 module.exports = router;

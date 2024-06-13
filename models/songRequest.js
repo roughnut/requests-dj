@@ -25,10 +25,10 @@ SongRequest.init(
         key: "id",
       },
     },
-    guest_id: {
+    user_id: {
       type: DataTypes.INTEGER,
       references: {
-        model: "guest",
+        model: "user",
         key: "id",
       },
     },

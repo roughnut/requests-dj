@@ -11,7 +11,7 @@
     </header>
     <nav>
         <a href="/">Home</a>
-        {{#if loggedIn}}
+        {{#if logged_in}}
         <button id="logout">Logout</button>
         {{else}}
         <a href="/login">Login</a>
@@ -26,7 +26,7 @@
             <button>Add new event</button>
         </section>
     </main>
-    {{#if loggedIn}}
+    {{#if logged_in}}
     <script src="/js/logout.js"></script>
     {{/if}}
 </body>

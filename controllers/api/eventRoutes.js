@@ -7,7 +7,7 @@ router.post('/', withAuth, async (req, res) => {
     try {
       const newEvent = await Event.create({
         ...req.body,
-        dj_id: req.session.user_id, //Might need to be changed to dj_id
+        user_id: req.session.user_id,
       });
   
       res.status(200).json(newEvent);
@@ -22,7 +22,7 @@ router.delete('/:id', withAuth, async (req, res) => {
       const eventData = await Event.destroy({
         where: {
           id: req.params.id,
-          dj_id: req.session.user_id, //Might need to be changed to dj_id
+          user_id: req.session.user_id,
         },
       });
   
@@ -41,10 +41,10 @@ router.delete('/:id', withAuth, async (req, res) => {
 router.put('/:id', withAuth, async (req, res) => {
     try {
       const { id } = req.params;
-      const { title, description, date } = req.body; // Depenging on the Event structure, most likely will have a title, desc, and the date of the event.
+      const { title, description, date } = req.body;
   
       const [updated] = await Event.update(
-        { title, description, date, dj_id: req.session.user_id }, //Might need to be changed to dj_id
+        { title, description, date, user_id: req.session.user_id },
         { where: { id } }
       );
   

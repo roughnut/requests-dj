@@ -1,15 +1,14 @@
-const DJ = require('./dj');
+const User = require('./user');
 const Event = require('./event');
-const Guest = require('./guest');
 const SongRequest = require('./songRequest');
 
-DJ.hasMany(Event, {
-    foreignKey: 'dj_id',
+User.hasMany(Event, {
+    foreignKey: 'user_id',
     onDelete: 'CASCADE',
 });
 
-Event.belongsTo(DJ, {
-    foreignKey: 'dj_id',
+Event.belongsTo(User, {
+    foreignKey: 'user_id',
 });
 
 Event.hasMany(SongRequest, {
@@ -21,13 +20,13 @@ SongRequest.belongsTo(Event, {
     foreignKey: 'event_id'
 });
 
-Guest.hasMany(SongRequest, {
-    foreignKey: 'guest_id',
+User.hasMany(SongRequest, {
+    foreignKey: 'user_id',
     onDelete: 'CASCADE',
 });
 
-SongRequest.belongsTo(Guest, {
-    foreignKey: 'guest_id'
+SongRequest.belongsTo(User, {
+    foreignKey: 'user_id'
 });
 
-module.exports = { DJ, Guest, Event, SongRequest }; 
+module.exports = { User, Event, SongRequest }; 

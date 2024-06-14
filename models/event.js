@@ -23,10 +23,10 @@ Event.init(
       type: DataTypes.DATE,
       allowNull: false,
     },
-    dj_id: {
+    user_id: {
       type: DataTypes.INTEGER,
       references: {
-        model: "dj",
+        model: "user",
         key: "id",
       },
     },

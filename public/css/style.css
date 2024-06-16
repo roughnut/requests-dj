@@ -77,3 +77,7 @@ header nav a:hover{
     text-decoration: none;
     color: #f4a261;
 }
+/* Tailwind's "no-underline" wasn't working for the Events links on homepage.handlebars so created this class - if someone can work out how to use no-underline, go for it! Jeremy */
+.underline-none {
+  text-decoration: none !important;
+}

@@ -1,0 +1,10 @@
+<h2>All Requests</h2>
+{{#each eventRequests as |request|}}
+
+  <div class="border-2 border-custom-green p-4 rounded-md transition-all cursor-pointer hover:shadow-md">
+    <header class="text-xl font-bold text-custom-charcoal">Song: {{request.title}}</header>
+    <p class="text-base">Artist: {{request.artist}}</p>
+    <p>Event: {{request.event.name}}</p>
+    <p class="text-base flex items-center text-custom-green">Requested by: {{request.user.username}}</p>
+  </div>
+{{/each}}

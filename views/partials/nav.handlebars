@@ -1,0 +1,19 @@
+<nav class="gap-4 flex text-white">
+  <a href="/" class="flex items-center gap-1 transition-all"><span
+      class="material-symbols-outlined text-custom-brown"
+    >
+      headphones
+    </span>Home</a>
+
+  
+  {{#if logged_in}}
+  <a href="#">Add Event</a>
+    <button id="logout">Logout</button>
+  {{else}}
+    <a href="/login" class="flex items-center gap-1 transition-all"><span
+        class="material-symbols-outlined text-custom-brown"
+      >
+        person
+      </span>Login</a>
+  {{/if}}
+</nav>

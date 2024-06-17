@@ -2,37 +2,27 @@ const router = require("express").Router();
 const { Event, SongRequest, User } = require("../../models");
 const withAuth = require("../../utils/auth");
 
-// // all song requests - this works but don't really need it
-// router.get("/", withAuth, async (req, res) => {
-//   try {
-//     const requestsResponse = await SongRequest.findAll({
-//       include: [
-//         {
-//           model: Event,
-//           attributes: ["name"],
-//         },
-//         {
-//           model: User,
-//           attributes: ["username"],
-//         },
-//       ],
-//     });
+// render song request form
+router.get("/new/:id", withAuth, async (req, res) => {
+  try {
+    const getEvent = await Event.findByPk(req.params.id);
+    const event = getEvent.get({plain: true});
 
-//     const eventRequests = requestsResponse.map((request) =>
-//       request.get({ plain: true })
-//     );
+    console.log(event.id);
 
-//     res.render("event", {
-//       eventRequests,
-//       logged_in: req.session.logged_in,
-//       username: req.session.username,
-//     });
-//   } catch (err) {
-//     res.status(500).json({ message: "Could not get requests ", error: err });
-//   }
-// });
+        res.render("song-request", {
+          event,
+          logged_in: req.session.logged_in,
+          username: req.session.username,
+        });
 
-// Song requests for a specific event
+  } catch (error) {
+    res.status(500).json(error);
+  }
+
+});
+
+// List of song requests for a specific event
 router.get("/:id", withAuth, async (req, res) => {
 
   try {
@@ -53,32 +43,42 @@ router.get("/:id", withAuth, async (req, res) => {
     });
     
     const eventSongs = eventResponse.map((song) => song.get({plain:true}));
-
     const eventName = eventSongs[0].event.name;
+    const eventInfo = {
+      name: eventSongs[0].event.name,
+      id: eventSongs[0].event_id,
+    }
 
-    console.log(eventName);
+    console.log(eventInfo);
 
     res.render("requests", {
       eventSongs,
-      eventName,
+      eventInfo,
       logged_in: req.session.logged_in,
       username: req.session.username,
     });
 
   } catch (error) {
-    
+    res.status(500).json(error);
   }
 
   });
 
 // Posting a new song Request.
 router.post("/", async (req, res) => {
+const { title: songTitle, artist: artistName, eventId } = req.body;
+console.log(songTitle, artistName, eventId);
+const userId = req.session.user_id;
+console.log('User id: ', userId);
+
   try {
     const newSongRequest = await SongRequest.create({
-      ...req.body,
-      user_id: req.session.user_id,
+      songTitle,
+      artistName,
+      eventId,
+      userId,
     });
-    res.json(newSongRequest);
+    res.status(200);
   } catch (err) {
     res.status(500).json(err);
   }

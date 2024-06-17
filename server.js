@@ -11,7 +11,11 @@ require ('dotenv').config();
 const app = express();
 const PORT = process.env.PORT || 3001;
 
-const hbs = exphbs.create({ helpers });
+const hbs = exphbs.create({   helpers: {
+    eq: function (a, b) {
+      return a === b;
+    },
+  }, });
 // if helpers are created later { helpers } need to be an option in exphbs.create({helpers})
 
 app.engine('handlebars', hbs.engine);

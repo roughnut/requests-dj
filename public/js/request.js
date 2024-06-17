@@ -15,7 +15,8 @@ const requestHandler = async (event) => {
           body: JSON.stringify({ songTitle, artistName, eventId }),
           headers: { "Content-Type": "application/json" },
         });
-
+        
+        console.log(response);
         if (response.ok) {
             document.location.replace(`/api/requests/${eventId}`);
         } else {

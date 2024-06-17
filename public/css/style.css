@@ -55,6 +55,9 @@
 h1.logo {
   text-indent: -9999;
 }
+h1.logo img{
+  width: 114px;
+}
 header nav a:hover {
   text-decoration: none;
   color: #f4a261;

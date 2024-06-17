@@ -1,0 +1,14 @@
+<h2>Song Request</h2>
+<form class="song-request-form">
+    <div>
+        <label for="song-title">Track title:</label>
+        <input type="text" name="song-title" id="song-title"/>
+    </div>
+    <div>
+        <label for="artist-name">Track artist:</label>
+        <input type="text" name="artist-name" id="artist-name"/>
+        <input type="hidden" id="event-id" value="{{event.id}}">
+    </div>
+    <button type="submit">Submit</button>
+</form>
+<script src="/js/request.js"></script>

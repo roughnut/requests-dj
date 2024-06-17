@@ -123,6 +123,25 @@ router.get("/events/:id", async (req, res) => {
   }
 });
 
+// render song request form
+router.get("/requests/:id", withAuth, async (req, res) => {
+	try {
+	  const getEvent = await Event.findByPk(req.params.id);
+	  const event = getEvent.get({plain: true});
+  
+	  console.log(event.id);
+  
+		  res.render("song-request", {
+			event,
+			logged_in: req.session.logged_in,
+			username: req.session.username,
+		  });
+  
+	} catch (error) {
+	  res.status(500).json(error);
+	}
+  
+  });
 // More homepage routes can be added here later
 
 module.exports = router;

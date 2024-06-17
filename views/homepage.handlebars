@@ -1,7 +1,7 @@
 <h2 class="text-4xl font-bold text-custom-charcoal">Events</h2>
 
 {{#each events as |event|}}
-  <a href="/api/requests/{{event.id}}" class="underline-none">
+  <a href="/events/{{event.id}}" class="underline-none">
     <div
       class="border-2 border-custom-green p-4 rounded-md transition-all cursor-pointer hover:shadow-md"
     >
@@ -20,5 +20,4 @@
       >{{event.description}}</p>
     </div>
   </a>
-
 {{/each}}

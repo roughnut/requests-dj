@@ -1,10 +1,17 @@
-<h2>All Requests</h2>
-{{#each eventRequests as |request|}}
+<h1 class="text-2xl font-bold">Event: {{eventInfo.name}}</h1>
 
-  <div class="border-2 border-custom-green p-4 rounded-md transition-all cursor-pointer hover:shadow-md">
-    <header class="text-xl font-bold text-custom-charcoal">Song: {{request.title}}</header>
-    <p class="text-base">Artist: {{request.artist}}</p>
-    <p>Event: {{request.event.name}}</p>
-    <p class="text-base flex items-center text-custom-green">Requested by: {{request.user.username}}</p>
+<!-- Request a Song Button -->
+<div class="mt-4 text-center">
+  <a href="/api/requests/new/{{eventInfo.id}}" class=" inline-block bg-dark text-white font-bold py-2 px-4 rounded hover:bg-green-700 transition-colors cursor-pointer">
+    Request a Song
+  </a>
+</div>
+
+{{#each songInfo as |song|}}
+  <div class="border-2 border-custom-green p-4 rounded-md transition-all hover:shadow-md m-2">
+    <header class="text-xl font-bold text-custom-charcoal">{{song.title}}</header>
+    <p class="text-base">{{song.artist}}</p>
+    <p class="text-base flex items-center text-custom-green">Requested by: {{song.user.username}}</p>
+    <a href="#">upvote (still need to write this code)</a>
   </div>
 {{/each}}

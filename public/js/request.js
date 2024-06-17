@@ -18,7 +18,7 @@ const requestHandler = async (event) => {
         
         console.log(response);
         if (response.ok) {
-            document.location.replace(`/api/requests/${eventId}`);
+            document.location.replace(`/events/${eventId}`);
         } else {
             alert("Song request failed. Please try again later.");
         }

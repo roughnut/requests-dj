@@ -66,19 +66,16 @@ router.get("/:id", withAuth, async (req, res) => {
 
 // Posting a new song Request.
 router.post("/", async (req, res) => {
-const { title: songTitle, artist: artistName, eventId } = req.body;
-console.log(songTitle, artistName, eventId);
-const userId = req.session.user_id;
-console.log('User id: ', userId);
-
   try {
     const newSongRequest = await SongRequest.create({
-      songTitle,
-      artistName,
-      eventId,
-      userId,
+      title: req.body.songTitle,
+      artist: req.body.artistName,
+      event_id: req.body.eventId,
+      user_id: req.session.user_id,
     });
-    res.status(200);
+
+    res.status(200).json(newSongRequest);
+
   } catch (err) {
     res.status(500).json(err);
   }

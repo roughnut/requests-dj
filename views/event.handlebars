@@ -6,12 +6,10 @@
     Request a Song
   </a>
   {{#if (eq eventInfo.user_id userId)}}
-    <button update-event-id="{{eventInfo.id}}" class="inline-block bg-custom-charcoal hover:bg-custom-green hover:no-underline text-white font-bold py-2 px-4 rounded-full transition-colors cursor-pointer update-event">
-    Update Event</button>
+    <a href="/events/update/{{eventInfo.id}}" update-event-id="{{eventInfo.id}}" class="inline-block bg-custom-charcoal hover:bg-custom-green hover:no-underline text-white font-bold py-2 px-4 rounded-full transition-colors cursor-pointer update-event">
+    Update Event</a>
     <button delete-event-id="{{eventInfo.id}}" class="inline-block bg-custom-charcoal hover:bg-custom-green hover:no-underline text-white font-bold py-2 px-4 rounded-full transition-colors cursor-pointer delete-event">
     Delete Event</button>
-
-    {{!-- <script src="/js/update-event.js"></script> --}}
   {{/if}}
 </div>
 

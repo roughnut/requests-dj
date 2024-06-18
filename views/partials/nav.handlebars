@@ -1,27 +1,27 @@
 <nav class="gap-4 flex text-white">
-  <a href="/" class="flex items-center gap-1 transition-all"><span class="material-symbols-outlined text-custom-brown">
-      headphones
+  <a href="/" class="flex items-center gap-1 transition-all hover:text-custom-mandalay hover:no-underline"><span class="material-symbols-outlined text-custom-brown">
+      home
     </span>Home</a>
 
 
   {{#if logged_in}}
   {{!-- <a href="#">Add Event</a> --}}
-    <a href="/events" class="flex items-center gap-1 transition-all"><span
+    <a href="/events" class="flex items-center gap-1 transition-all hover:text-custom-mandalay hover:no-underline"><span
       class="material-symbols-outlined text-custom-brown">
       event
     </span>Add Event</a>
   {{!-- <button id="logout">Logout</button> --}}
-    <button id="logout" class="flex items-center gap-1 transition-all"><span
+    <button id="logout" class="flex items-center gap-1 transition-all hover:text-custom-mandalay hover:no-underline"><span
       class="material-symbols-outlined text-custom-brown">
       logout
     </span>Logout</button>
   {{else}}
-  <a href="/login" class="flex items-center gap-1 transition-all"><span
+  <a href="/login" class="flex items-center gap-1 transition-all hover:text-custom-mandalay hover:no-underline"><span
       class="material-symbols-outlined text-custom-brown">
       person
     </span>Login</a>
 
-  <a href="/signUp" class="flex items-center gap-1 transition-all"><span
+  <a href="/signUp" class="flex items-center gap-1 transition-all hover:text-custom-mandalay hover:no-underline"><span
       class="material-symbols-outlined text-custom-brown">
       login
     </span>Sign Up</a>

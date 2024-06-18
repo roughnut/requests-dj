@@ -4,8 +4,14 @@ module.exports = {
   theme: {
     fontFamily: {
       'sans': ['Helvetica', 'Arial', 'sans-serif'],
+    container: {
+      center: true,
     extend: {},
   },
-  plugins: [],
-}
-}
+},
+  plugins: [
+    plugin(function({ addBase, theme }) {
+      addBase({
+        'p': { fontSize: theme('fontSize.2xl') },
+  })})]
+}}

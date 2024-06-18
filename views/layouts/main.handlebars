@@ -5,8 +5,9 @@
     {{! Tailwind }}
     <script src="https://cdn.tailwindcss.com"></script>
     {{! Custom CSS }}
-    <link rel="stylesheet" href="/css/jass.css" />
-    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/jass.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/output.css">
     {{! Google Icons }}
     <link
       rel="stylesheet"
@@ -32,5 +33,7 @@
     {{#if logged_in}}
       <script src="/js/logout.js"></script>
     {{/if}}
+
+    {{> footer }}
   </body>
 </html>

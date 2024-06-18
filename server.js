@@ -18,7 +18,8 @@ const hbs = exphbs.create({   helpers: {
   }, });
 // if helpers are created later { helpers } need to be an option in exphbs.create({helpers})
 
-app.engine('handlebars', hbs.engine);
+app.engine('handlebars', hbs.engine, 'views/layout');
+// app.engine(exphbs );
 app.set('view engine', 'handlebars');
 
 const sesh = {
@@ -43,6 +44,12 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(routes);
 
+// routing 
+app.get('/', (req, res) => {
+    res.render('main');
+});
+
 sequelize.sync({ force: false }).then(() => {
     app.listen(PORT, () =>  console.log(`Listening on http://localhost:${PORT}`));
 });
+

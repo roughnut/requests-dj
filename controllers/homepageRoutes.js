@@ -124,6 +124,7 @@ router.get("/events/:id", async (req, res) => {
       eventInfo,
       songInfo,
       logged_in: req.session.logged_in,
+	  userId: req.session.user_id,
     });
   } catch (err) {
     console.error(err);

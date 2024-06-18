@@ -8,7 +8,7 @@
       <header
         class="text-xl font-bold text-custom-charcoal"
       >{{event.name}}</header>
-      <p class="text-base">{{event.date}}</p>
+      <p class="text-base">{{event.formattedDate}}</p>
       <p class="text-base flex items-center text-custom-green"><span
           class="material-symbols-outlined text-custom-brown"
         >
@@ -20,12 +20,4 @@
       >{{event.description}}</p>
     </div>
   </a>
-  {{#if (eq this.user_id ../userId)}}
-   <button class="delete-event" delete-event-id="{{event.id}}" class="flex items-center gap-1 transition-all"><span
-    class="material-symbols-outlined text-custom-brown">
-    delete
-  </span>Delete Event</button>
-{{/if}}
 {{/each}}
-
-<script src="/js/delete-event.js"></script>

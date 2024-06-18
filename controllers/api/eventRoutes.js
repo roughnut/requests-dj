@@ -42,10 +42,10 @@ router.delete("/:id", withAuth, async (req, res) => {
 router.put("/:id", withAuth, async (req, res) => {
   try {
     const { id } = req.params;
-    const { title, description, date } = req.body;
+    const { name, description, date } = req.body;
 
     const [updated] = await Event.update(
-      { title, description, date, user_id: req.session.user_id },
+      { name, description, date, user_id: req.session.user_id },
       { where: { id } }
     );
 

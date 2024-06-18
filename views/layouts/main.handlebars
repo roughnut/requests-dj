@@ -15,25 +15,32 @@
     />
     <title>Requests DJ</title>
   </head>
-  <body>
+
+
+  <body class="flex flex-col min-h-screen">
     <header
       class="container mx-auto bg-custom-charcoal flex items-center justify-between p-4 rounded-full mt-3">
       {{> nav }}
       <h1 class="logo flex">Requests DJ
-        <img src="../images/logo.svg" alt="Request Dj Logo" />
+        <img src="../rqdj-logo/RequestDJ.svg" alt="Request Dj Logo" />
       </h1>
     </header>
-    <main class="container mx-auto">
-      <section class="mt-5">
-        <article class="mt-4 gap-4">
+
+    <main class="container mx-auto flex-1">
+      <section class="mt-5 min-h-full">
+        <article class="m-8 gap-4">
           {{{body}}}
         </article>
       </section>
     </main>
+
     {{#if logged_in}}
       <script src="/js/logout.js"></script>
     {{/if}}
+    <div>
+      {{> footer }}
+      </div>
+</body>
 
-    {{> footer }}
-  </body>
+
 </html>

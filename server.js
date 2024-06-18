@@ -47,7 +47,6 @@ app.use(routes);
 // routing 
 app.get('/', (req, res) => {
     res.render('main');
-    console.log('main');
 });
 
 sequelize.sync({ force: false }).then(() => {

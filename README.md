@@ -2,7 +2,7 @@
 Discover Requests DJ, the ultimate destination to DJ, Connect, and Play.
 
 ## Description
-- 
+[JEREMY TO ADD]
 
 ## Table of Contents:
 - [Description](#Description)
@@ -17,6 +17,7 @@ Discover Requests DJ, the ultimate destination to DJ, Connect, and Play.
 
 ## Directory_Structure
 ```  
+
 ├── REQUESTS DJ/
   ├── config/ 
     ├── connection.js 
@@ -68,9 +69,12 @@ Discover Requests DJ, the ultimate destination to DJ, Connect, and Play.
 ## Usage 
 ### Technical Details
 [Tech info]
--
--
--
+- Date-fns Module
+- Handlebars
+- JavaScript
+- Postgres
+- Sequelize
+- Render
 
 ### Images
 [IMAGES TO GO HERE]
@@ -82,15 +86,15 @@ Discover Requests DJ, the ultimate destination to DJ, Connect, and Play.
 > - .env
 
 ## Usage_Instructions
-1. instruction
-2. instruction
-3. instruction 
+[!Website Link][]
 
 ## Design 
-- tailwind
+- tailwind css 
 
 ## Contributions
 ### Resources_Used
+- tailwind
+
 
 ## Credits
 Jeremy White | Rhianna Wilson | Lachlan Hughes | Daniela Leal

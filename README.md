@@ -17,27 +17,52 @@ Discover Requests DJ, the ultimate destination to DJ, Connect, and Play.
 
 ## Directory_Structure
 ```  
-REQUESTS DJ
-├── assets/
-    ├── logo/   
-      ├── {image files}    
-    ├── webFeatures/
-      ├── {image files}
-    ├── css/
-      ├── style.css
-├── config/ 
-    ├── connection.js      
-├── models/                
-    ├── dj.js       
+├── REQUESTS DJ/
+  ├── config/ 
+    ├── connection.js 
+  ├── controllers/  
+    ├── api/
+      ├── eventRoutes.js  
+      ├── index.js
+      ├── songReqRoutes.js
+      ├── userRoutes.js
+    ├── homepageRoutes.js/
+    ├── index.js 
+  ├── db/
+    ├── schema.sql     
+  ├── models/                   
     ├── event.js  
-    ├── guest.js       
-    ├── index.js       
-    ├── songRequests.js         
-├── .gitignore             
-├── package-lock.json
-├── package.json
-├── README.md
-└── server.js         
+    ├── index.js        
+    ├── songRequests.js  
+    ├── user.js 
+  ├── node_modules/
+  ├── public
+    ├── css/ 
+      ├── jass.css        
+      ├── output.css  
+      ├── style.css 
+    ├── images/
+      ├── favicon_io/
+      ├── RequestDJLogo.svg
+    ├── js/
+      ├── delete-event.js
+      ├── events.js
+      ├── login.js
+      ├── logout.js
+      ├── request.js
+      ├── signUp.js
+  ├── seeds/
+    ├── eventSeeds.js
+    ├── seeds.js
+    ├── songSeeds.js
+    ├── userSeeds.js
+  ├── .env           
+  ├── .gitignore             
+  ├── package-lock.json
+  ├── package.json
+  ├── README.md
+  ├── server.js
+  └── tailwind.config.js         
 ```
 
 ## Usage 
@@ -62,15 +87,10 @@ REQUESTS DJ
 3. instruction 
 
 ## Design 
-- 
-- 
-- 
+- tailwind
 
 ## Contributions
 ### Resources_Used
--
--
--
 
 ## Credits
 Jeremy White | Rhianna Wilson | Lachlan Hughes | Daniela Leal

@@ -1,5 +1,6 @@
 const router = require('express').Router();
 const { User, Event, SongRequest } = require('../models');
+const { format } = require('date-fns');
 const withAuth = require('../utils/auth'); // Added but unused as of now
 
 // router to get the events.
@@ -14,11 +15,17 @@ router.get('/', async (req, res) => {
 		}
 	);
 
-		const events = eventList.map((event) => event.get({
+		const events = eventList.map((event) => {
+			const formatEvent = event.get({
 			plain: true
-		}));
+		});
+		if (formatEvent.date) {
+			formatEvent.formattedDate = format(formatEvent.date, 'd MMMM, yyyy');
+		}
+		return formatEvent;
+	});
 
-		console.log(events);
+	console.log(events);
 
 		res.render('homepage', {
 			events,

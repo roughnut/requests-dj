@@ -82,7 +82,7 @@ router.get("/signUp", (req, res) => {
 	}
   });
 
-router.get("/events/:id", async (req, res) => {
+router.get("/events/:id", withAuth, async (req, res) => {
   try {
     const eventData = await Event.findByPk(req.params.id, {
       include: [

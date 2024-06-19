@@ -289,7 +289,7 @@ h1.logo img {
 .branding path {
   fill: var(--pupil);
 }
-label {
+.volume {
   height: 44px;
   width: 44px;
   position: fixed;
@@ -297,17 +297,17 @@ label {
   right: 1rem;
   cursor: pointer;
 }
-label > svg {
+.volume > svg {
   position: absolute;
   height: 100%;
   width: 100%;
   top: 0;
   left: 0;
 }
-label path {
+.volume path {
   fill: white;
 }
-label svg:nth-of-type(1) {
+.volume svg:nth-of-type(1) {
   display: none;
 }
 [type="checkbox"] {
@@ -315,10 +315,10 @@ label svg:nth-of-type(1) {
   height: 0;
   width: 0;
 }
-:checked ~ label svg:nth-of-type(1) {
+:checked ~ .volume svg:nth-of-type(1) {
   display: block;
 }
-:checked ~ label svg:nth-of-type(2) {
+:checked ~ .volume svg:nth-of-type(2) {
   display: none;
 }
 .genre-switch {
@@ -335,7 +335,6 @@ label svg:nth-of-type(1) {
   height: 10px;
   width: 10px;
   background: hsl(var(--hue), 50%, 50%);
-  /* transform: translate(-50%, -50%); */
   -webkit-clip-path: polygon(0 0, 100% 0, 50% 100%);
   clip-path: polygon(0 0, 100% 0, 50% 60%);
 }

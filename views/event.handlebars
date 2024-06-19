@@ -20,6 +20,10 @@
     <p class="text-base">{{song.artist}}</p>
     <p class="text-base flex items-center text-custom-green">Requested by: {{song.user.username}}</p>
     <p>Votes: {{song.upvoteCount}}</p>
-    <a href="#">upvote (still need to write this code)</a>
+    <button upvote-button-id="{{song.id}}" event-id="{{event.id}}" class="upvote-button flex items-center gap-1 transition-all hover:text-custom-mandalay hover:no-underline"><span
+    class="material-symbols-outlined text-custom-brown">
+    thumb_up
+    </span>Upvote</button>
   </div>
 {{/each}}
+<script src="/js/upvotes.js"></script>

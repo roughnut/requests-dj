@@ -1,8 +1,8 @@
 # Requests-DJ
-Discover Requests DJ, the ultimate destination to DJ, Connect, and Play.
 
 ## Description
-[JEREMY TO ADD]
+
+The ultimate song request management app for DJs and party guests! DJs can create events that guests can use to make song requests, both in the days leading up to and event and during the event itself. It's a great tool for a DJ to play the songs that the guests want to hear! 
 
 ## Table of Contents:
 - [Description](#Description)
@@ -86,7 +86,7 @@ Discover Requests DJ, the ultimate destination to DJ, Connect, and Play.
 > - .env
 
 ## Usage_Instructions
-[!Website Link][]
+[Requests DJ](https://requests-dj.onrender.com/ "link to deployed app")
 
 ## Design 
 - tailwind css 

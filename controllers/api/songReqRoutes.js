@@ -9,7 +9,7 @@ router.get("/new/:id", withAuth, async (req, res) => {
     const getEvent = await Event.findByPk(req.params.id);
     const event = getEvent.get({plain: true});
 
-    console.log(event.id);
+    // console.log(event.id);
 
         res.render("song-request", {
           event,

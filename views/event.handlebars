@@ -13,7 +13,7 @@
     <script src="/js/delete-event.js"></script>
   {{/if}}
 </div>
-
+{{#if songInfo.length}}
 {{#each songInfo as |song|}}
   <div class="border-2 border-custom-green p-4 rounded-md transition-all hover:shadow-md m-2">
     <header class="text-xl font-bold text-custom-charcoal">{{song.title}}</header>
@@ -26,4 +26,8 @@
     </span>Upvote</button>
   </div>
 {{/each}}
+{{else}}
+{{!-- Please replace this with what you would like in the background --}}
+<p>PLACEHOLDER</p>
+{{/if}}
 <script src="/js/upvotes.js"></script>

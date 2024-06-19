@@ -2,7 +2,7 @@
 
 ## Description
 
-The ultimate song request management app for DJs and party guests! DJs can create events that guests can use to make song requests, both in the days leading up to and event and during the event itself. It's a great tool for a DJ to play the songs that the guests want to hear!
+The ultimate song request management app for DJs and party guests! DJs can create events that guests can use to make song requests, both in the days leading up to and event and during the event itself. It's a great tool for a DJ to play the songs that the guests want to hear! 
 
 ## Table of Contents:
 - [Description](#Description)

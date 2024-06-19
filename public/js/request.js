@@ -10,7 +10,7 @@ const requestHandler = async (event) => {
     }
 
     if (songTitle && artistName) {
-        const response = await fetch("/api/requests", {
+        const response = await fetch(`/api/requests`, {
           method: "POST",
           body: JSON.stringify({ songTitle, artistName, eventId }),
           headers: { "Content-Type": "application/json" },

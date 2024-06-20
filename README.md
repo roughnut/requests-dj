@@ -2,99 +2,62 @@
 
 ## Description
 
-The ultimate song request management app for DJs and party guests! DJs can create events that guests can use to make song requests, both in the days leading up to and event and during the event itself. It's a great tool for a DJ to play the songs that the guests want to hear! 
+The ultimate song request management app for DJs and party guests! DJs can create events that guests can use to make song requests, both in the days leading up to and event and during the event itself. It's a great tool for a DJ to play the songs that the guests want to hear!
 
-## Table of Contents:
-- [Description](#Description)
-- [Directory Structure](#Directory_Structure)
-- [Usage & Technical Details](#Usage)
-- [Usage Instructions](#Usage_Instructions)
-- [Design](#Design)
-- [Resources Used](#Resources_Used)
-- [Credits](#Credits)
-- [License](#License)
-- [Author](#Author)
+## Table of Contents
+
+- [Directory Structure](#directory_structure)
+- [Usage](#usage)
+- [Technology](#technology)
+- [Screenshots](#screenshots)
+- [Credits](#credits)
 
 ## Directory_Structure
-```  
 
-├── REQUESTS DJ/
+```md
+├── requests-dj/
+  ├── assets/
+    ├── screenshots/
   ├── config/ 
-    ├── connection.js 
   ├── controllers/  
     ├── api/
-      ├── eventRoutes.js  
-      ├── index.js
-      ├── songReqRoutes.js
-      ├── userRoutes.js
-    ├── homepageRoutes.js/
-    ├── index.js 
-  ├── db/
-    ├── schema.sql     
+  ├── db/   
   ├── models/                   
-    ├── event.js  
-    ├── index.js        
-    ├── songRequests.js  
-    ├── user.js 
-  ├── node_modules/
   ├── public
     ├── css/ 
-      ├── jass.css        
-      ├── output.css  
-      ├── style.css 
     ├── images/
-      ├── favicon_io/
-      ├── RequestDJLogo.svg
     ├── js/
-      ├── delete-event.js
-      ├── events.js
-      ├── login.js
-      ├── logout.js
-      ├── request.js
-      ├── signUp.js
   ├── seeds/
-    ├── eventSeeds.js
-    ├── seeds.js
-    ├── songSeeds.js
-    ├── userSeeds.js
-  ├── .env           
-  ├── .gitignore             
-  ├── package-lock.json
-  ├── package.json
-  ├── README.md
-  ├── server.js
-  └── tailwind.config.js         
+  ├── utils/
+    ├── helpers/     
+  ├── views/
+    ├── layouts/
+    ├── partials/                     
 ```
 
-## Usage 
-### Technical Details
-[Tech info]
+## Usage
+
+Deployed link on Render.com: [Requests DJ](https://requests-dj.onrender.com/ "link to deployed app")
+
+Note given free-tier, the database can take a few minutes to spin up.
+
+## Technology
+
+- Node
 - Date-fns Module
 - Handlebars
 - JavaScript
 - Postgres
 - Sequelize
 - Render
+- Tailwind
 
-### Images
-[IMAGES TO GO HERE]
+### Screenshots
 
-### .gitignore 
-> - dist
-> - ds store
-> - node modules
-> - .env
-
-## Usage_Instructions
-[Requests DJ](https://requests-dj.onrender.com/ "link to deployed app")
-
-## Design 
-- tailwind css 
-
-## Contributions
-### Resources_Used
-- tailwind
-
+![screenshot1](./assets/images/requests-dj-screenshot-1.png "requested songs screenshot")
+![screenshot2](./assets/images/requests-dj-screenshot-2.png "add event screenshot")
+![screenshot3](./assets/images/requests-dj-screenshot-3.png "request song screenshot")
 
 ## Credits
-Jeremy White | Rhianna Wilson | Lachlan Hughes | Daniela Leal
+
+[Jeremy White](https://github.com/roughnut "Jeremy's Github profile") | [Rhianna Wilson](https://github.com/rhiannawilson "Rhianna's Github profile") | [Lachlan Hughes](https://github.com/CinosMagician "Lachlan's Github profile") | [Daniela Leal](https://github.com/falfada "Daniela's Github profile")
